@@ -8,6 +8,21 @@ The goal of this project is to classify urban sounds (e.g. sirens, car horns, do
 
 This repository explores the task of automatic urban sound classification, going through the typical Deep Learning pipeline applied to audio: from data collection and pre-processing, to feature extraction, model training, and comparative performance evaluation.
 
+## Results at a glance
+
+| Model | Accuracy (10-fold CV) |
+|---|---|
+| CNN (baseline) | 60.7% |
+| **CNN v2 (improved)** | **68.7%** |
+| CRNN v2 | 68.5% |
+
+- **Proper validation:** 10-fold cross-validation with UrbanSound8K's predefined folds, so clips from the same recording never appear in both training and test data.
+- **Simpler was better:** the v2 models have fewer parameters, ELU activations and lighter dropout, which reduced overfitting and gained +8 points.
+- **CNN vs CRNN:** the CNN was best overall, but the CRNN did better on sounds with a clear time pattern, like car horns (81.8% vs 77.0%).
+- **Robustness test:** a DeepFool adversarial attack on 100 "dog bark" samples dropped accuracy from 79% to 14% using changes too small to hear.
+
+📄 Full report (in Portuguese): `Classificacao-de-Sons-Urbanos-com-Deep-Learning.pdf`
+
 ## Repository structure
 
 | File | Description |
