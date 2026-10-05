@@ -21,7 +21,7 @@ This repository explores the task of automatic urban sound classification, going
 - **CNN vs CRNN:** the CNN was best overall, but the CRNN did better on sounds with a clear time pattern, like car horns (81.8% vs 77.0%).
 - **Robustness test:** a DeepFool adversarial attack on 100 "dog bark" samples dropped accuracy from 79% to 14% using changes too small to hear.
 
-📄 Full report (in Portuguese): `Classificacao-de-Sons-Urbanos-com-Deep-Learning.pdf`
+📄 [Full report (in Portuguese)](Classificacao-de-Sons-Urbanos-com-Deep-Learning.pdf)
 
 ## Repository structure
 
